@@ -154,19 +154,11 @@ search.addEventListener("click", (e) => {
 //Making Error Function to display if no names were found;
 function showError() {
   //Inside this function we hide the student ul and display our message
-  let h3 = document.createElement("h3");
-  h3.textContent = "No results found";
-  ul.style.display = "none";
+ ul.innerHTML = `<h3>No results found</h3>`
   linkList.style.display = "none";
-  headerDiv.append(h3);
 }
 //here we hide the error messge by removing it from the header
 function hideError() {
-  let h3 = document.querySelector("h3");
-  if (headerDiv.lastElementChild.tagName === "H3") {
-    headerDiv.removeChild(h3);
-  }
-  ul.style.display = "";
   linkList.style.display = "";
 }
 
